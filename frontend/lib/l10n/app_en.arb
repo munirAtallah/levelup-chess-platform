@@ -1,0 +1,792 @@
+{
+  "@@locale": "en",
+
+  "loginEmailRequired": "Email is required",
+  "loginPasswordResetSentMsg": "Password reset sent to {email}",
+  "@loginPasswordResetSentMsg": {
+    "placeholders": {
+      "email": { "type": "String" }
+    }
+  },
+  "emailHint": "Email",
+  "passwordHint": "Password",
+  "usernameHint": "Username",
+  "pinHint": "PIN",
+  "signInButton": "Sign In",
+
+  "loginToggleStudent": "Student",
+  "loginToggleStaff": "Staff",
+  "loginEmailAddressLabel": "Email Address",
+  "loginPasswordLabel": "Password",
+  "loginForgotPassword": "Forgot Password?",
+  "loginUsernameLabel": "Username",
+  "loginPinCodeLabel": "PIN Code",
+
+  "navHome": "Home",
+  "navCurriculum": "Curriculum",
+  "navUsers": "Users",
+  "navGroups": "Groups",
+  "navLogs": "Logs",
+  "navMaterials": "Materials",
+  "navTasks": "Tasks",
+  "navActivity": "Activity",
+  "navLearn": "Learn",
+  "navAlerts": "Alerts",
+  "navProfile": "Profile",
+
+  "welcomeBack": "Welcome back,",
+  "roleAdministrator": "Administrator",
+  "loggingOut": "Logging out...",
+  "platformOverview": "PLATFORM OVERVIEW",
+  "platformStatistics": "PLATFORM STATISTICS",
+  "statisticsTitle": "Statistics",
+  "statStudents": "Students",
+  "statInstructors": "Instructors",
+  "statLevels": "Levels",
+  "statActiveTasks": "Active Tasks",
+  "statLessons": "Lessons",
+  "statGroups": "Groups",
+  "recentActivity": "RECENT ACTIVITY",
+  "seeAll": "See all",
+  "noRecentActivity": "No recent activity",
+
+  "levelNameLabel": "Level Name",
+  "weekNameLabel": "Week Name",
+  "materialTitleLabel": "Material Title",
+  "contentLabel": "Content",
+  "assignmentTitleLabel": "Assignment Title",
+  "searchLessonsTags": "Search lessons & tags...",
+  "noLevelsYet": "No levels yet",
+  "addFirstLevel": "Add your first study level to get started",
+
+  "noGroupsFound": "No groups found",
+  "tryDifferentSearch": "Try a different search term",
+
+  "allRoles": "All Roles",
+  "allTime": "All Time",
+
+  "roleInstructor": "Instructor",
+  "phoneNumberLabel": "Phone Number",
+  "homeAddressLabel": "Home Address",
+  "emailAddressLabel": "Email Address",
+  "editProfileTitle": "Edit Profile – {name}",
+  "@editProfileTitle": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "editLevelsTitle": "Edit Levels – {name}",
+  "@editLevelsTitle": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "levelBeginner": "Level 1 – Beginner",
+  "levelIntermediate": "Level 2 – Intermediate",
+  "levelAdvanced": "Level 3 – Advanced",
+  "noLevelsAssigned": "No levels assigned",
+
+  "gradeSubmission": "Grade Submission",
+  "reviseGrade": "Revise Grade",
+  "statusCorrect": "Correct",
+  "statusIncorrect": "Incorrect",
+  "statusPartial": "Partial",
+  "statusPending": "Pending",
+  "statusActive": "Active",
+  "statusInactive": "Inactive",
+  "noGroupAssigned": "No Group Assigned",
+  "noStudentSubmissions": "Students haven't submitted their answers",
+  "gradeButton": "Grade",
+
+  "shareCredentialsMsg": "Share these login credentials with the student",
+  "credFullName": "Full Name",
+  "credUsername": "Username",
+  "credPinCode": "PIN Code",
+  "credStudentNumber": "Student #",
+  "noStudentsInGroup": "No students found",
+  "addStudentsOrSearch": "Add students or adjust search",
+
+  "yourAnswer": "YOUR ANSWER",
+  "gradedCorrect": "Graded: Correct",
+  "gradedIncorrect": "Graded: Incorrect",
+  "updateAssignment": "Update Assignment",
+  "submitAssignment": "Submit Assignment",
+
+  "statSubmissionsLabel": "Submissions",
+  "statGradedLabel": "Graded",
+  "statCorrectLabel": "Correct",
+
+  "createAssignment": "Create Assignment",
+  "chooseCreationMethod": "Choose how to create your assignment",
+  "fromCurriculumPool": "From Curriculum Pool",
+  "fromCurriculumPoolDesc": "Assign a task from the admin's weekly curriculum",
+  "createFromScratch": "Create From Scratch",
+  "createFromScratchDesc": "Write a new text-based assignment",
+  "curriculumPoolTitle": "Curriculum Pool",
+  "assignmentsTitle": "Assignments",
+  "textAnswerType": "Text Answer",
+  "multipleChoiceType": "Multiple Choice",
+  "selectDeadline": "Select Deadline *",
+  "titleAndDeadlineRequired": "Title and deadline are required",
+  "atLeast2Options": "Please provide at least 2 options",
+  "tabActive": "Active",
+  "tabPast": "Overdue",
+  "filterAll": "All",
+  "filterOverdue": "Overdue",
+  "filterCentral": "Central",
+  "filterCustom": "Custom",
+  "noAssignments": "No assignments",
+  "noAssignmentsSubtitle": "Create one or change filters",
+  "editContent": "Edit Content",
+  "editDeadlineMenu": "Edit Deadline",
+  "deleteAssignment": "Delete Assignment",
+  "deadlineUpdated": "Deadline for \"{title}\" updated.",
+  "@deadlineUpdated": {
+    "placeholders": {
+      "title": { "type": "String" }
+    }
+  },
+  "titleRequired": "Title is required",
+  "saveChanges": "Save Changes",
+  "deleteAssignmentConfirm": "Are you sure you want to permanently delete this assignment?",
+  "assignmentDeleted": "\"{title}\" has been deleted.",
+  "@assignmentDeleted": {
+    "placeholders": {
+      "title": { "type": "String" }
+    }
+  },
+
+  "levelsAndBrowse": "{count} levels · Browse & assign",
+  "@levelsAndBrowse": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "noResults": "No results",
+  "tryDifferentKeyword": "Try a different keyword",
+  "noCurriculum": "No curriculum",
+  "adminNotAddedCurriculum": "The admin has not added curriculum yet",
+
+  "myGroupsTitle": "My Groups",
+  "groupsAssignedCount": "{count} groups assigned",
+  "@groupsAssignedCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+
+  "roleInstructorLabel": "Instructor",
+  "activeBadge": "ACTIVE NOW",
+  "dashboardAssignments": "Assignments",
+  "dashboardMyGroups": "My Groups",
+  "myOverview": "MY OVERVIEW",
+  "statMyGroups": "My Groups",
+  "statPendingReview": "Pending Review",
+  "navigatingToStudents": "Navigating to student roster...",
+  "activeAssignmentsHeader": "ACTIVE ASSIGNMENTS",
+
+  "categoryAll": "All",
+  "categoryGrading": "Grading",
+  "categoryStudents": "Students",
+  "categoryAssignments": "Assignments",
+  "categoryCurriculum": "Curriculum",
+  "countTotalShown": "{total} total · {shown} shown",
+  "@countTotalShown": {
+    "placeholders": {
+      "total": { "type": "String" },
+      "shown": { "type": "String" }
+    }
+  },
+  "noActivityFound": "No activity found",
+  "tryAdjustingSearch": "Try adjusting your search or filter",
+
+  "pendingTabCount": "Pending ({count})",
+  "@pendingTabCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "submittedTabCount": "Submitted ({count})",
+  "@submittedTabCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "noPendingTasks": "No pending tasks",
+  "allCaughtUp": "You are all caught up!",
+  "noSubmittedTasks": "No submitted tasks",
+  "submitFirstAssignment": "Submit your first assignment",
+
+  "alertsTitle": "Alerts",
+  "notificationsCount": "{count} notifications",
+  "@notificationsCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "newNotificationsCount": "{count} new",
+  "@newNotificationsCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "noNotifications": "No notifications",
+  "allCaughtUpNotif": "You're all caught up!",
+
+  "helloGreeting": "Hello, {name}",
+  "@helloGreeting": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "lessonsSection": "LESSONS",
+  "tasksDueCount": "{count} Tasks Due",
+  "@tasksDueCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "newNotifCount": "{count} New",
+  "@newNotifCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "lessonLibrary": "LESSON LIBRARY",
+  "lessonsCountLabel": "{count} lessons",
+  "@lessonsCountLabel": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "searchLessonsTopics": "Search lessons & topics...",
+
+  "notFound": "Not Found",
+  "assignmentNotFound": "Assignment not found.",
+
+  "statusLabel": "Status",
+  "feedbackLabel": "Feedback",
+  "writeFeedbackHint": "Write your feedback here...",
+  "saveGrade": "Save Grade",
+  "gradeSaved": "Grade saved successfully",
+  "assignmentDetails": "Assignment Details",
+  "instructionsLabel": "Instructions",
+  "createdByLabel": "Created by",
+  "optionsLabel": "Options",
+  "submissionsLabel": "Submissions",
+  "noSubmissionsYet": "No submissions yet",
+  "selectedChoice": "Selected Choice",
+  "instructorFeedback": "Instructor Feedback",
+  "addInstructor": "Add Instructor",
+  "noInstructorsFound": "No instructors found",
+  "addButton": "Add",
+  "closeButton": "Close",
+  "addStudent": "Add Student",
+  "createNewStudent": "Create New Student",
+  "generateCredentialsAuto": "Generate credentials automatically",
+  "noStudentsFound": "No students found",
+  "createStudent": "Create Student",
+  "fullNameLabel": "Full Name",
+  "assignToLevel": "Assign to Level",
+  "cancelButton": "Cancel",
+  "createButton": "Create",
+  "studentAdded": "Student Added",
+  "doneButton": "Done",
+  "pinResetTitle": "PIN Reset",
+  "searchByNameEmail": "Search by name or email...",
+  "groupDetails": "Group Details",
+  "deleteGroup": "Delete Group",
+  "totalMembersLabel": "Total Members",
+  "deleteGroupConfirm": "Delete {group}?",
+  "@deleteGroupConfirm": {
+    "placeholders": {
+      "group": { "type": "String" }
+    }
+  },
+  "deleteButton": "Delete",
+  "delete": "Delete",
+  "groupDeleted": "{group} deleted",
+  "@groupDeleted": {
+    "placeholders": {
+      "group": { "type": "String" }
+    }
+  },
+  "noInstructorsAssigned": "No instructors assigned",
+  "searchByNameUsername": "Search by name or username...",
+  "allLevels": "All Levels",
+  "resetPin": "Reset PIN",
+  "removeFromGroup": "Remove from Group",
+  "deletePermanently": "Delete Permanently",
+  "deleteStudent": "Delete Student",
+  "deleteStudentConfirm": "Delete {student}?",
+  "@deleteStudentConfirm": {
+    "placeholders": {
+      "student": { "type": "String" }
+    }
+  },
+  "studentDeleted": "{student} deleted",
+  "@studentDeleted": {
+    "placeholders": {
+      "student": { "type": "String" }
+    }
+  },
+  "lessonLabel": "Lesson",
+  "viewAsPdfTooltip": "View as PDF",
+  "level1Label": "Level 1",
+  "week1Foundations": "Week 1: Foundations",
+  "studentDetails": "Student Details",
+  "accountDetails": "Account Details",
+  "recentSubmissions": "Recent Submissions",
+  "reactFundamentalsQuiz": "React Fundamentals Quiz",
+  "reactLibraryDesc": "React library description",
+  "submittedLabel": "Submitted",
+  "editAnswer": "Edit Answer",
+  "changeAnswer": "Change Answer",
+  "assignmentSaved": "Assignment saved",
+  "addLevelTitle": "Add Level",
+  "cancel": "Cancel",
+  "add": "Add",
+  "addWeekTitle": "Add Week",
+  "addMaterialTitle": "Add Material",
+  "addAssignmentTitle": "Add Assignment",
+  "curriculumTitle": "Curriculum",
+  "levelsCount": "{count} Levels",
+  "@levelsCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "weeksCount": "{count} Weeks",
+  "@weeksCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "itemsCount": "{count} Items",
+  "@itemsCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "noItemsYet": "No items yet",
+  "addMaterial": "Add Material",
+  "addAssignment": "Add Assignment",
+  "deleteGroupTitle": "Delete Group",
+  "deleteGroupConfirmation": "Delete {group}?",
+  "@deleteGroupConfirmation": {
+    "placeholders": {
+      "group": { "type": "String" }
+    }
+  },
+  "groupDeletedSuccess": "{group} deleted",
+  "@groupDeletedSuccess": {
+    "placeholders": {
+      "group": { "type": "String" }
+    }
+  },
+  "groupsTitle": "Groups",
+  "groupsCount": "{count} Groups",
+  "@groupsCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "searchGroups": "Search groups...",
+  "addInstructorTitle": "Add Instructor",
+  "assignLevels": "Assign Levels",
+  "levelLabel": "Level {level}",
+  "@levelLabel": {
+    "placeholders": {
+      "level": { "type": "String" }
+    }
+  },
+  "instructorAddedSuccess": "Instructor added. Welcome email with login details sent.",
+  "save": "Save",
+  "profileUpdated": "Profile for {name} updated",
+  "@profileUpdated": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "selectLevelsSubtitle": "Select levels",
+  "levelsUpdated": "Levels for {name} updated",
+  "@levelsUpdated": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "staffInstructorsTitle": "Staff Instructors",
+  "instructorsCount": "{count} Instructors",
+  "@instructorsCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "deleteUserTitle": "Delete User",
+  "deleteUserConfirmation": "Delete {name}?",
+  "@deleteUserConfirmation": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "userDeletedSuccess": "{name} deleted",
+  "@userDeletedSuccess": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "auditLogsTitle": "Audit Logs",
+  "entriesCount": "{count} Entries",
+  "@entriesCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "searchActionsUsers": "Search actions or users...",
+  "newGroup": "New Group",
+  "createNewGroupDesc": "Create a new group",
+  "groupNameHint": "Group Name",
+  "groupCreated": "{name} created",
+  "@groupCreated": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "assignMaterial": "Assign Material",
+  "selectGroupStep": "Select Group",
+  "chooseGroupHint": "Choose group",
+  "selectLevelHint": "Select level",
+  "targetLevelsStep": "Target Levels",
+  "deadlineStep": "Deadline",
+  "materialsLabel": "Materials",
+  "searchMaterials": "Search materials...",
+  "assignToLevelTooltip": "Assign to Level",
+  "activityLabel": "Activity",
+  "searchByActionName": "Search by action name...",
+  "myTasks": "My Tasks",
+  "searchAssignments": "Search assignments...",
+  "myProfile": "My Profile",
+  "studentRoleLabel": "Student",
+  "accountInfo": "Account Info",
+  "signOut": "Sign Out",
+  "imageNotLoaded": "Image not loaded",
+  "secureModeEnabled": "Secure mode enabled",
+
+  "studentIdLabel": "Student ID",
+  "profileLevelLabel": "Level",
+  "profileGroupLabel": "Group",
+
+  "instructorsSectionTitle": "INSTRUCTORS",
+  "studentsSectionTitle": "STUDENTS",
+  "studentsCount": "{count} students",
+  "@studentsCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "createdOnLabel": "Created: {date}",
+  "@createdOnLabel": {
+    "placeholders": {
+      "date": { "type": "String" }
+    }
+  },
+  "levelOneLabel": "Level 1",
+  "levelTwoLabel": "Level 2",
+  "levelThreeLabel": "Level 3",
+
+  "submittedTimeAgo": "Submitted {time}",
+  "@submittedTimeAgo": {
+    "placeholders": {
+      "time": { "type": "String" }
+    }
+  },
+  "timeAgoMinutes": "{count}m ago",
+  "@timeAgoMinutes": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "timeAgoHours": "{count}h ago",
+  "@timeAgoHours": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "timeAgoDays": "{count}d ago",
+  "@timeAgoDays": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "timeNever": "Never",
+  "timeOnline": "Online",
+
+  "dueDeadlineLabel": "Due {deadline}",
+  "@dueDeadlineLabel": {
+    "placeholders": {
+      "deadline": { "type": "String" }
+    }
+  },
+  "typeAnswerHint": "Type your answer here...",
+  "submissionLocked": "Submission locked.",
+  "deadlinePassedLocked": "Deadline passed! Submissions are locked.",
+  "noAnswerProvided": "No answer provided.",
+
+  "submissionsWaitingReview": "{count} submissions waiting for your review",
+  "@submissionsWaitingReview": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+
+  "centralBadgeLabel": "Central",
+  "customBadgeLabel": "Custom",
+  "closedBadgeLabel": "Closed",
+  "pendingCountLabel": "{count} pending",
+  "@pendingCountLabel": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "gradedCountLabel": "{count} graded",
+  "@gradedCountLabel": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+
+  "filterRoleAdmin": "Admin",
+  "filterTimeToday": "Today",
+  "filterTime7Days": "7 Days",
+  "filterTime30Days": "30 Days",
+
+  "newPinForStudent": "New PIN for {name}:",
+  "@newPinForStudent": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+
+  "timeJustNow": "Just now",
+  "timeAgoWeeks": "{count}w ago",
+  "@timeAgoWeeks": { "placeholders": { "count": { "type": "String" } } },
+
+  "actionCreatedLevel": "Created new level",
+  "actionAddedInstructor": "Added instructor",
+  "actionCreatedAssignment": "Created assignment",
+  "actionGradedSubmission": "Graded submission",
+  "actionSubmittedAssignment": "Submitted assignment",
+  "actionRevisedGrade": "Revised grade",
+  "actionAddedStudent": "Added new student",
+  "actionResetPin": "Reset student PIN",
+  "actionJoinedGroup": "Joined group",
+
+  "pinLabel": "PIN",
+  "noContentProvided": "No content provided.",
+  "pdfDocumentLabel": "PDF Document",
+  "viewLabel": "View",
+  "hintAssignmentInstructions": "Assignment instructions...",
+  "hintEnterQuestion": "Enter your question here...",
+  "hintOptionN": "Option {n}",
+  "@hintOptionN": { "placeholders": { "n": { "type": "String" } } },
+  "addOptionButton": "Add Option",
+  "assignmentAssignedSuccess": "\"{title}\" assigned!",
+  "@assignmentAssignedSuccess": { "placeholders": { "title": { "type": "String" } } },
+  "nSelected": "{count} selected",
+  "@nSelected": { "placeholders": { "count": { "type": "String" } } },
+
+  "bulkCreateTitle": "Create Students",
+  "addAnotherStudent": "Add Another",
+  "addNStudents": "Add {count} Students",
+  "@addNStudents": { "placeholders": { "count": { "type": "String" } } },
+  "createNStudents": "Create {count} Students",
+  "@createNStudents": { "placeholders": { "count": { "type": "String" } } },
+  "studentsCreatedBulk": "{count} Students Created",
+  "@studentsCreatedBulk": { "placeholders": { "count": { "type": "String" } } },
+  "enterNamesPerLine": "Enter or paste student names (one per line):",
+  "assignSelectedToLevel": "Assign selected to:",
+  "addNStudentsToLevel": "Add {count} to {level}",
+  "@addNStudentsToLevel": {
+    "placeholders": {
+      "count": { "type": "String" },
+      "level": { "type": "String" }
+    }
+  },
+  "fromAdminTemplate": "From Admin Template",
+  "fromAdminTemplateDesc": "Assign a fixed admin curriculum item to your group",
+  "adminTemplates": "Admin Templates",
+  "noTemplatesAvailable": "No templates available.",
+  "centralTemplate": "Central · Template",
+  "assignTemplateTitle": "Assign \"{title}\"",
+  "@assignTemplateTitle": {
+    "placeholders": {
+      "title": { "type": "String" }
+    }
+  },
+  "assignmentAssignedToGroup": "\"{title}\" assigned to {group}",
+  "@assignmentAssignedToGroup": {
+    "placeholders": {
+      "title": { "type": "String" },
+      "group": { "type": "String" }
+    }
+  },
+  "assignmentAssignedToGroupLevel": "\"{title}\" assigned to {group} ({level})",
+  "@assignmentAssignedToGroupLevel": {
+    "placeholders": {
+      "title": { "type": "String" },
+      "group": { "type": "String" },
+      "level": { "type": "String" }
+    }
+  },
+  "assignmentAlreadyAssignedGroupLevel": "\"{title}\" is already assigned to {group} for {level}!",
+  "@assignmentAlreadyAssignedGroupLevel": {
+    "placeholders": {
+      "title": { "type": "String" },
+      "group": { "type": "String" },
+      "level": { "type": "String" }
+    }
+  },
+  "totalCount": "{count} total",
+  "@totalCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "activeCount": "{count} active",
+  "@activeCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "pastCount": "{count} overdue",
+  "@pastCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "editGroupName": "Edit Group Name",
+  "groupName": "Group Name",
+  "deleteGroupConfirmDesc": "Are you sure you want to delete this group?\nStudents count: {studentCount}\nInstructors count: {instructorCount}",
+  "@deleteGroupConfirmDesc": {
+    "placeholders": {
+      "studentCount": { "type": "String" },
+      "instructorCount": { "type": "String" }
+    }
+  },
+  "deleteGroupWarning": "The group can be restored by an admin from the Archive.",
+  "editName": "Edit Name",
+  "archive": "Archive",
+  "addAnotherStudentLabel": "+ Add Another Student",
+  "requiredFieldError": "Required",
+  "usernameFormatError": "Lowercase, no spaces",
+  "insertImageUrlTooltip": "Insert Image URL",
+  "insertImageTitle": "Insert Image",
+  "insertButton": "Insert",
+  "assign": "Assign",
+  "usernameAlreadyTaken": "Username already taken",
+  "failedToCreateStudent": "Failed to create student: {error}",
+  "@failedToCreateStudent": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "pinCopiedToClipboard": "PIN copied to clipboard",
+  "iHaveSavedPin": "I have saved the PIN",
+  "resetPinConfirm": "Reset PIN?",
+  "resetPinConfirmDesc": "Are you sure you want to reset the PIN for {name}? This will generate a new 6-digit random PIN.",
+  "@resetPinConfirmDesc": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "failedToResetPin": "Failed to reset PIN: {error}",
+  "@failedToResetPin": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "failedToDeleteStudent": "Failed to delete {name}: {error}",
+  "@failedToDeleteStudent": {
+    "placeholders": {
+      "name": { "type": "String" },
+      "error": { "type": "String" }
+    }
+  },
+  "groupRenamed": "Group renamed to \"{name}\"",
+  "@groupRenamed": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "failedToRenameGroup": "Failed to rename group: {error}",
+  "@failedToRenameGroup": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "groupMovedToArchive": "\"{name}\" moved to archive",
+  "@groupMovedToArchive": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "failedToArchiveGroup": "Failed to archive group: {error}",
+  "@failedToArchiveGroup": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "failedToCreateGroup": "Failed to create group: {error}",
+  "@failedToCreateGroup": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "assignMaterialTitle": "Assign Material \"{title}\"",
+  "@assignMaterialTitle": {
+    "placeholders": {
+      "title": { "type": "String" }
+    }
+  },
+  "currentAssignments": "Assigned Groups",
+  "noGroupAssignmentsYet": "Not assigned to any groups yet.",
+  "alreadyAssignedToGroupLevel": "Material is already assigned to this group and level!",
+  "levelLowerError": "Cannot assign material to a lower group level!",
+  "materialAssignedSuccess": "Material assigned successfully!",
+  "materialLevelLabel": "Material Level: {level}",
+  "@materialLevelLabel": {
+    "placeholders": {
+      "level": { "type": "String" }
+    }
+  },
+
+  "peopleAndUsers": "People & Users",
+  "curriculumContent": "Curriculum & Content",
+  "activeToday": "active today",
+  "statTotal": "Total",
+  "gradingOverview": "Grading Overview",
+  "totalSubmissions": "Total Submissions",
+  "gradedCorrectIndicator": "Correct",
+  "gradedIncorrectIndicator": "Incorrect",
+
+  "adminDashboard": "Admin Dashboard",
+  "overviewDashboard": "Overview Dashboard",
+  "adminUserName": "Admin User",
+  "adminAuthorityLevel": "Level 1 Authority",
+  "searchHint": "Search...",
+  "notificationsTooltip": "Notifications",
+  "settingsTooltip": "Settings",
+  "logoutButton": "Logout",
+  "languageButton": "Language",
+
+  "superAdmin": "Super Admin",
+  "statusOnline": "Online",
+  "globalSearchHint": "Search students, instructors, groups…",
+  "darkModeComingSoon": "Dark mode coming soon",
+  "fromLastMonth": "from last month",
+  "badgeAssignment": "Assignment",
+  "badgeGroup": "Group",
+  "badgeLesson": "Lesson",
+  "badgeUser": "User",
+  "badgeSubmission": "Submission"
+}

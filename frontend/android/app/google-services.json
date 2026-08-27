@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "646568336245",
+    "project_id": "levelup-26",
+    "storage_bucket": "levelup-26.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646568336245:android:395f1099a2c1a28bb2d13c",
+        "android_client_info": {
+          "package_name": "com.example.frontend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646568336245-12uhkkaa5u513lq1c30umgguoqqbad1i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCM-iM4c-vmpVrK7aQH0uzAGUC-yoHa7s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646568336245-12uhkkaa5u513lq1c30umgguoqqbad1i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "646568336245-5r66pfbn5i7seet265clvtqivvkb3rj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.frontend"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

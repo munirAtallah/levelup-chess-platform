@@ -1,0 +1,152 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Helpers ────────────────────────────────────────────────────────────
+    // NOTE: users must be readable by any signed-in user so that role()
+    // can be called from other rules without causing a circular get() loop.
+
+    function role() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role;
+    }
+
+    function isNotArchived() {
+      return !get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('isArchived', false);
+    }
+
+    function isSignedIn()   { return request.auth != null; }
+    function isAdmin()      { return isSignedIn() && role() == 'admin' && isNotArchived(); }
+    function isInstructor() { return isSignedIn() && role() == 'instructor' && isNotArchived(); }
+    function isStudent()    { return isSignedIn() && role() == 'student' && isNotArchived(); }
+    function isStaff()      { return isAdmin() || isInstructor(); }
+
+    // ── users ──────────────────────────────────────────────────────────────
+
+    match /users/{userId} {
+      allow read:   if isSignedIn();
+      allow create: if isAdmin();
+      allow update: if isAdmin() ||
+                    (isInstructor() && resource.data.role == 'student') ||
+                    (request.auth.uid == userId && request.resource.data.role == resource.data.role);
+      allow delete: if isAdmin();
+    }
+
+
+    // ── groups ─────────────────────────────────────────────────────────────
+
+    match /groups/{groupId} {
+      // Admins read all groups.
+      // Instructors read all groups — needed for count() in createGroup and for the group list.
+      // Students can read only the group they are assigned to (groupId field on their user doc).
+      allow read: if isAdmin() ||
+                    isInstructor() ||
+                    (isStudent() &&
+                      get(/databases/$(database)/documents/users/$(request.auth.uid)).data.groupId == groupId);
+      allow create: if isStaff();
+      allow update: if isAdmin() ||
+                      (isInstructor() && request.auth.uid in resource.data.instructorIds);
+      allow delete: if isAdmin() ||
+                      (isInstructor() && request.auth.uid in resource.data.instructorIds);
+    }
+
+    // ── curriculum ─────────────────────────────────────────────────────────
+
+    match /curriculum/{levelId} {
+      allow read:  if isSignedIn();
+      allow write: if isAdmin();
+    }
+
+    // ── assigned_materials ──────────────────────────────────────────────────
+
+    match /assigned_materials/{assignmentId} {
+      allow read:  if isSignedIn();
+      allow write: if isStaff();
+    }
+
+    // ── assignments ────────────────────────────────────────────────────────
+
+    match /assignments/{assignmentId} {
+      allow read:           if isStaff() || isStudent();
+      allow create:         if isStaff();
+      allow update:         if isStaff() || (isStudent() && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['pendingCount', 'submittedCount']));
+      allow delete:         if isAdmin() || (isInstructor() && resource.data.instructorId == request.auth.uid);
+    }
+
+    // ── submissions ────────────────────────────────────────────────────────
+
+    match /submissions/{submissionId} {
+      allow read:   if isStaff() ||
+                      (isStudent() && resource.data.studentId == request.auth.uid);
+      allow create: if isStudent() && request.resource.data.studentId == request.auth.uid;
+      allow update: if isStaff() ||
+                      (isStudent() &&
+                       resource.data.studentId == request.auth.uid &&
+                       request.resource.data.studentId == request.auth.uid &&
+                       resource.data.status == 'pending' &&
+                       request.resource.data.status == 'pending');
+      allow delete: if isAdmin();
+    }
+
+    // ── notifications ───────────────────────────────────────────────────────
+
+    match /notifications/{notifId} {
+      allow read:   if isSignedIn() && resource.data.recipientUid == request.auth.uid;
+      allow update: if isSignedIn() && resource.data.recipientUid == request.auth.uid;
+      allow create: if isStaff();
+      allow delete: if isAdmin() || (isSignedIn() && resource.data.recipientUid == request.auth.uid);
+    }
+
+    // ── audit_logs ─────────────────────────────────────────────────────────
+    //
+    // READ:
+    //   Admin  → full access to all logs (the Logs screen).
+    //   Instructor → only their own logs (performedBy == their UID).
+    //   Students → no access.
+    //
+    // CREATE:
+    //   Any signed-in staff member may write a log, BUT the 'performedBy'
+    //   field MUST equal the caller's UID — no one can forge another person's
+    //   log entry.
+    //
+    // UPDATE / DELETE:
+    //   Permanently blocked — logs are append-only and immutable.
+
+    match /audit_logs/{logId} {
+      allow read: if isAdmin() ||
+                    (isInstructor() && resource.data.performedBy == request.auth.uid);
+
+      allow create: if isStaff() &&
+                      request.resource.data.performedBy == request.auth.uid;
+
+      allow update, delete: if false;
+    }
+
+    // ── counters ───────────────────────────────────────────────────────────
+
+    match /counters/{counterId} {
+      allow read, write: if isStaff();
+    }
+
+    // ── instructor_materials ───────────────────────────────────────────────
+
+    match /instructor_materials/{materialId} {
+      // Any signed-in non-archived user can read (students see only
+      // visible ones via the query filter in the repository; security
+      // rules allow the read but the query uses where('isVisible', == true)).
+      allow read: if request.auth != null && isNotArchived();
+
+      // Instructors and admins can create / update their own materials.
+      allow create: if request.auth != null && isNotArchived() &&
+        (role() == 'admin' || role() == 'instructor') &&
+        request.resource.data.instructorId == request.auth.uid;
+
+      allow update: if request.auth != null && isNotArchived() &&
+        (role() == 'admin' ||
+          (role() == 'instructor' && resource.data.instructorId == request.auth.uid));
+
+      // Admins can delete any material; instructors can only delete their own.
+      allow delete: if request.auth != null && isNotArchived() &&
+        (role() == 'admin' || resource.data.instructorId == request.auth.uid);
+    }
+  }
+}

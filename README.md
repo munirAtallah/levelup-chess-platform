@@ -34,5 +34,6 @@ Live web app: https://edu.shah2range.com
 - **Ahmad Abu Gharbieh** — Team Member
 
 ## Notes
-- Built for a real non-profit client as a final-year capstone project.
-- The mobile app is named "LevelUp"; the organization brand is "شطرنج القدس" (Jerusalem Chess).
+- Built for a real non-profit client as a college project.
+- The mobile app is named "LevelUp"; the organization brand is Shah2Range
+- .
